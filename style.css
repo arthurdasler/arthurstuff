@@ -17,10 +17,30 @@
   font-display: swap;
 }
 
+
+html {
+  min-height: 100%;
+}
+
+
 body {
-    background-color: rgb(216, 216, 216);
+    background: #d3e7eb;
+    background: linear-gradient(0deg, rgb(232, 251, 255) 0%, rgba(255, 255, 255, 1) 100%);
+    margin: 0;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1;
     padding: 10px;
-}    
+
+}
+
+.allweb {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .logotype {
     width: 150px;
@@ -51,7 +71,7 @@ body {
 
 
 .button:hover {
-    color: rgb(68, 68, 68);
+    color: rgb(162, 162, 162);
 }
 
 
@@ -67,25 +87,26 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px ;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 100%;
     padding-top: 30px;
     background-color: var(--color2);
+    height: 100%;
 }
 
 
 
 .footer {
+    background-color: rgba(0, 255, 255, 0);
     display: flex;
     flex-direction: column;
     align-items: end;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     text-align: end;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-right: 10px;
 }
 
 .card {
@@ -99,10 +120,16 @@ body {
 }
 
 
-
-.card img {
-    object-fit: cover;
+.card-img {
     width: 100%;
+    height: 400px;
+}
+
+.card-img img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .card-info {
@@ -116,8 +143,14 @@ body {
     justify-content: space-between;
     width: fit-content;
     gap: 30px ;
-    width: 100%;
 
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .card-name {
@@ -135,13 +168,37 @@ body {
 
 @media (max-width: 768px) {
 
+    .header {
+        display: block;
+    }
+
     .header-buttons {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 6px;
-    padding-top: 30px;
-}
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 20px;
+        gap: 6px;
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px ;
+        align-items: center;
+    }
+
+    .card-info {
+        align-items: center;
+    }
+
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+  }
+
+    
+    
     .footer {
         font-size: 10px;
     }
