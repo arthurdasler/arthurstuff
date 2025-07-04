@@ -125,6 +125,16 @@ body {
     height: 400px;
 }
 
+.card-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none; /* на всякий случай */
+}
+
 .card-img img {
     display: block;
     object-fit: contain;
