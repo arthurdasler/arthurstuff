@@ -1,6 +1,6 @@
-/* * {
+* {
     border: 0.1px solid red;
-} */
+}
 
 :root {
     --color1: rgba(127, 255, 212, 0);
@@ -116,6 +116,7 @@ body {
     justify-content: space-between;
     width: fit-content;
     gap: 30px ;
+    width: 100%;
 
 }
 
