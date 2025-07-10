@@ -19,7 +19,7 @@ input, button {
     display: flex;
     flex-direction: column;
     gap: 20px;
-      padding-bottom: 100px;
+    padding-bottom: 100px;
     justify-content: space-around;
 }
 
