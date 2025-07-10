@@ -1,0 +1,47 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts-block {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Inter';
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.contact-line span:hover {
+    color: rgb(117, 117, 117);
+}
+
+.contact-line img {
+    height: fit-content;
+    width: 40px;
+}
+
+@media (max-width: 768px) {
+
+
+    .contact-line {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .contact-line img {
+        width: 20px;
+    }
+
+
+}
