@@ -31,7 +31,7 @@ window.checkCode = function () {
 
   if (!inputCode) {
     resultElement.textContent = 'Код не введен';
-    resultElement.style.color = 'red';
+    resultElement.style.color = 'rgb(190, 13, 0)';
     loaderElement.style.display = 'none';
     return;
   }
@@ -54,8 +54,8 @@ window.checkCode = function () {
         </p>
 
         <p>
-          <strong class="output-info">Предназначено:</strong>
-          <span style="color: ${assignedTo === 'Нет информации' ? 'red' : 'green'}">${assignedTo}</span>
+          <b class="output-info">Предназначено:</b>
+          <span class="positive-result" style="color: ${assignedTo === 'Нет информации' ? 'red' : 'green'}">${assignedTo}</span>
         </p>
 
         <p>
@@ -63,14 +63,14 @@ window.checkCode = function () {
           <span style="color: ${individualNumber === 'Нет информации' ? 'red' : 'green'}">${individualNumber}</span>
         </p>
 
-        <p>
+        <p style="display: flex; align-items: center">
           <strong class="output-info">Верификация:</strong>
-          <span style="color: ${verified === '×' ? 'red' : 'green'}">${verified}</span>
+          <span style="color: ${verified === '×' ? 'red' : 'green'}"> <img src="SVG/verify.svg" style="display: block; height: 24px;"> </span>
         </p>
       `;
     } else {
       resultElement.textContent = 'Такого номера не существует';
-      resultElement.style.color = 'red';
+      resultElement.style.color = 'rgb(190, 13, 0)';
     }
   }).catch((error) => {
     console.error('Ошибка:', error);

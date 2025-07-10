@@ -4,8 +4,14 @@ input, button {
 }
 
 .hero {
-    position: fixed;
-    bottom: 30vh;
+  position: fixed;
+  top: 40vh; /* вместо bottom */
+
+  display: flex;
+  flex-direction: column;
+
+  /* для отладки */
+  background: rgba(89, 42, 42, 0);
 }
 
 .form {
@@ -47,7 +53,48 @@ input, button {
     padding-left: 8px;
 }
 
+.input:active {
+    background-color: rgba(37, 185, 185, 0);
+    
+}
+
 .button {
     background-color: rgba(192, 192, 192, 0);
+}
+
+.result {
+    font-family: 'Inter';
+    font-size: 14px;
+}
+
+.positive-result {
+    font-size: 14px;
+}
+
+#loader {
+  width: 100px; /* Устанавливает ширину лоадера */
+  height: 16px; /* Устанавливает высоту лоадера */
+  z-index: 9999; /* Убедитесь, что лоадер отображается поверх других элементов */
+  padding-top: 30px;
+}
+
+
+.skeleton-text {
+  width: 100%; /* Ширина скелетона текста */
+  height: 100%; /* Высота скелетона текста */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); /* Градиентный фон для анимации */
+  background-size: 200% 100%; /* Устанавливаем размер фона для анимации */
+  animation: loading 1.5s infinite; /* Запускаем анимацию загрузки */
+  border-radius: 4px; /* Скругление углов */
+  margin-top: -20px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
