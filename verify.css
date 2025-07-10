@@ -32,6 +32,9 @@ input, button {
 }
 
 .form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
     position: relative;
     font-family: 'Inter';
     font-size: 12px;
@@ -96,6 +99,13 @@ input, button {
   }
   100% {
     background-position: -100% 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .form-block {
+
   }
 }
 
