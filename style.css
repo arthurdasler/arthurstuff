@@ -10,8 +10,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'DecimaMonoX';
-  src: url('fonts/DecimaMonoX.ttf') format('truetype');
+  font-family: 'ArthurstuffMono';
+  src: url('fonts/ArthurstuffMono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@ body {
 }
 
 .button {
-    font-family: 'DecimaMonoX';
+    font-family: 'ArthurstuffMono';
     letter-spacing: -1px;
     font-size: 14px;
     text-decoration: none;
@@ -166,13 +166,13 @@ body {
 }
 
 .card-name {
-    font-family: 'DecimaMonoX';
+    font-family: 'ArthurstuffMono';
     letter-spacing: -1px;
     white-space: nowrap;
 }
 
 .card-price {
-    font-family: 'DecimaMonoX';
+    font-family: 'ArthurstuffMono';
     letter-spacing: -1px;
     white-space: nowrap;
 }

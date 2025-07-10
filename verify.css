@@ -26,7 +26,8 @@ input, button {
 }
 
 .paragraph {
-    font-family: 'Inter';
+    font-family: 'ArthurstuffMono';
+    letter-spacing: -1px;
     font-size: 14px;
 }
 
@@ -37,7 +38,7 @@ input, button {
 }
 
 .input {
-    font-family: 'DecimaMonoX';
+    font-family: 'ArthurstuffMono';
     letter-spacing: -1px;
     font-size: 14px;
     text-decoration: none;
