@@ -28,7 +28,7 @@
 .point {
     display: flex;
     flex-direction: row;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
 }
 
