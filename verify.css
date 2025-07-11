@@ -25,7 +25,7 @@ button {
 }
 
 .result {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   padding-top: 10px;
   width: fit-content;
@@ -42,7 +42,7 @@ button {
   flex-direction: column;
   gap: 20px;
   position: relative;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
 }
 
