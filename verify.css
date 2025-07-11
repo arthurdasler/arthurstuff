@@ -1,4 +1,5 @@
-input, button {
+input,
+button {
   all: unset;
   box-sizing: border-box;
 }
@@ -16,82 +17,91 @@ input, button {
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 100px;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: space-around;
 }
 
 .result {
-    padding-top: 20px;
+  font-family: 'Inter';
+  font-size: 14px;
+  padding-top: 10px;
+  width: fit-content;
 }
 
 .paragraph {
-    font-family: 'ArthurstuffMono';
-    letter-spacing: -1px;
-    font-size: 14px;
+  font-family: 'ArthurstuffMono';
+  letter-spacing: -1px;
+  font-size: 14px;
 }
 
 .form-block {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    font-family: 'Inter';
-    font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  font-family: 'Inter';
+  font-size: 12px;
 }
 
 .input {
-    font-family: 'ArthurstuffMono';
-    letter-spacing: -1px;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-    border-radius: 2px;
+  font-family: 'ArthurstuffMono';
+  letter-spacing: -1px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  border-radius: 2px;
 
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid rgb(164, 164, 164);
-    padding-bottom: 4px;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 8px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgb(164, 164, 164);
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .input:active {
-    background-color: rgba(37, 185, 185, 0);
-    
+  background-color: rgba(37, 185, 185, 0);
+
 }
 
 .button {
-    background-color: rgba(192, 192, 192, 0);
+  background-color: rgba(192, 192, 192, 0);
 }
 
-.result {
-    font-family: 'Inter';
-    font-size: 14px;
-}
+
 
 .positive-result {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #loader {
-  width: 100px; /* Устанавливает ширину лоадера */
-  height: 16px; /* Устанавливает высоту лоадера */
-  z-index: 9999; /* Убедитесь, что лоадер отображается поверх других элементов */
+  width: 100px;
+  /* Устанавливает ширину лоадера */
+  height: 16px;
+  /* Устанавливает высоту лоадера */
+  z-index: 9999;
+  /* Убедитесь, что лоадер отображается поверх других элементов */
   padding-top: 30px;
 }
 
 
 .skeleton-text {
-  width: 100%; /* Ширина скелетона текста */
-  height: 100%; /* Высота скелетона текста */
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); /* Градиентный фон для анимации */
-  background-size: 200% 100%; /* Устанавливаем размер фона для анимации */
-  animation: loading 1.5s infinite; /* Запускаем анимацию загрузки */
-  border-radius: 4px; /* Скругление углов */
+  width: 100%;
+  /* Ширина скелетона текста */
+  height: 100%;
+  /* Высота скелетона текста */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  /* Градиентный фон для анимации */
+  background-size: 200% 100%;
+  /* Устанавливаем размер фона для анимации */
+  animation: loading 1.5s infinite;
+  /* Запускаем анимацию загрузки */
+  border-radius: 4px;
+  /* Скругление углов */
   margin-top: -20px;
 }
 
@@ -99,15 +109,11 @@ input, button {
   0% {
     background-position: 100% 0;
   }
+
   100% {
     background-position: -100% 0;
   }
 }
 
 
-@media (max-width: 768px) {
-  .form-block {
-
-  }
-}
-
+@media (max-width: 768px) {}
