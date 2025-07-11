@@ -11,9 +11,13 @@
 .about {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    gap: 50px  ;
+    width: 650px;
+    gap: 50px;
     padding-top: 100px;
+}
+
+.point-desc {
+    word-break: keep-all;
 }
 
 .logo {
@@ -22,7 +26,8 @@
 }
 
 .logo img {
-    width: 300px;
+
+    width: 100px;
 }
 
 .point {
@@ -31,6 +36,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 14px;
 }
+
+
 
 .number {
     padding-right: 100px;
@@ -61,11 +68,12 @@
     .about {
         gap: 20px;
         padding-top: 50px;
-        width: 90vw;
+        width: 100%;
+        word-break: keep-all;
     }
 
     .logo img {
-        width: 150px;
+        width: 70px;
     }
 
     .logo {
@@ -75,5 +83,7 @@
     .point {
         font-size: 12px;
     }
+
+
 
 }
