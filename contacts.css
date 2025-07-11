@@ -1,3 +1,7 @@
+/* * {
+    border: 1px solid rebeccapurple;
+} */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -6,9 +10,10 @@
 
 .contacts-block {
     padding-left: 10px;
-    display: flex;
+    display: block;
     flex-direction: column;
-    width: 100%;
+    gap: 10px;
+    width: fit-content;
 }
 
 .contact-line {
@@ -26,13 +31,10 @@
 }
 
 .contact-line img {
-    height: fit-content;
     width: 40px;
 }
 
 @media (max-width: 768px) {
-
-
     .contact-line {
         font-size: 20px;
         color: rgb(0, 0, 0);

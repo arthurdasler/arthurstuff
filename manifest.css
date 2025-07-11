@@ -59,15 +59,21 @@
     }
 
     .about {
+        gap: 20px;
+        padding-top: 50px;
         width: 90vw;
     }
 
     .logo img {
-        width: 200px;
+        width: 150px;
     }
 
     .logo {
         padding-left: 30px;
+    }
+
+    .point {
+        font-size: 12px;
     }
 
 }
