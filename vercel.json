@@ -1,7 +1,0 @@
-{
-  "redirects": [
-    { "source": "/contacts", "destination": "/contacts.html", "permanent": true },
-    { "source": "/manifest", "destination": "/manifest.html", "permanent": true },
-    { "source": "/verify", "destination": "/verify.html", "permanent": true }
-  ]
-}
