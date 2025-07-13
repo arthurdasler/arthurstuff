@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="allweb" id="">
+    <div class="allweb" id="page-content">
         <div class="content">
             <div class="header">
                 <a href="https://arthurstuff.ru/"><img class="logotype" src="SVG/AS-logo.svg" style="width: 100px;"></a>
@@ -59,7 +59,16 @@
         </div>
     </div>
 
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.to("#page-content", {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+</script>
 
 </body>
 

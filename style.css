@@ -17,6 +17,11 @@
   font-display: swap;
 }
 
+#page-content {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 
 html {
   min-height: 100%;
