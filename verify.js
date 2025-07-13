@@ -65,7 +65,7 @@ window.checkCode = function () {
 
         <p style="display: flex; align-items: center">
           <strong class="output-info">Верификация:</strong>
-          <span style="color: ${verified === '×' ? 'red' : 'green'}"> <img src="SVG/verify.svg" style="display: block; height: 24px;"> </span>
+          <span style="color: ${verified === '×' ? 'red' : 'green'}"> <img src="/SVG/verify.svg" style="display: block; height: 24px;"> </span>
         </p>
       `;
     } else {
