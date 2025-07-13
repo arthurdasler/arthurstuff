@@ -1,24 +1,7 @@
 {
   "redirects": [
-    {
-      "source": "index.html",
-      "destination": "main",
-      "permanent": true
-    },
-        {
-      "source": "manifest.html",
-      "destination": "manifest",
-      "permanent": true
-    },
-        {
-      "source": "verify.html",
-      "destination": "verify",
-      "permanent": true
-    },
-        {
-      "source": "contacts.html",
-      "destination": "contacts",
-      "permanent": true
-    }
+    { "source": "/contacts", "destination": "/contacts.html", "permanent": true },
+    { "source": "/manifest", "destination": "/manifest.html", "permanent": true },
+    { "source": "/verify", "destination": "/verify.html", "permanent": true }
   ]
 }
