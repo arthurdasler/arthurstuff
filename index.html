@@ -78,17 +78,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
 
+            // Проверяем, что mini app реально открыт через Telegram
+            if (!tg.initData) {
+                console.warn("Это не mini app Telegram, tg.sendData не сработает");
+                return;
+            }
+
             document.querySelectorAll('.add-button').forEach(div => {
                 div.addEventListener('click', () => {
-                    const itemId = div.dataset.id; // получаем id из data-id
-
-                    tg.sendData(JSON.stringify({
-                        action: 'buy',
-                        itemId: itemId
-                    }));
-
-                    // По желанию: закрываем mini app после клика
-                    // tg.close();
+                    const itemId = div.dataset.id;
+                    tg.sendData(JSON.stringify({ action: 'buy', itemId }));
                 });
             });
         });
