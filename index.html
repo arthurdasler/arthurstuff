@@ -73,6 +73,19 @@
 
     </div>
 
+    <script>
+        // Выбираем все кнопки
+        const buttons = document.querySelectorAll('.add-button');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const itemId = btn.dataset.id; // получаем data-id
+                const botUrl = `https://t.me/your_bot?start=${itemId}`; // формируем ссылку
+                window.open(botUrl, '_blank'); // открываем в новой вкладке (Telegram app откроется)
+            });
+        });
+    </script>
+
 
 </body>
 
