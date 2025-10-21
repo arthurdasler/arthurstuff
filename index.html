@@ -25,7 +25,7 @@
                     <div class="card-title"> BLACK EDITION</div>
                     <div class="card-price"> <b> 11 900 ₽ </b></div>
                 </div>
-                <div class="add-button">
+                <div class="add-button" data-id="black-edition">
                     <img src="img/add-icon.svg" alt="add-button">
                 </div>
             </div>
@@ -63,14 +63,28 @@
         </div>
 
 
-       
 
 
-        
+
+
 
     </div>
 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        const tg = window.Telegram.WebApp;
 
+        document.querySelectorAll('.add-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const itemId = button.dataset.id; // <-- возьмем id из data-id
+                const payload = {
+                    action: 'buy',
+                    itemId: itemId
+                };
+                tg.sendData(JSON.stringify(payload)); // отправляем данные боту
+            });
+        });
+    </script>
 </body>
 
 </html>
