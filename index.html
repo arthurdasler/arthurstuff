@@ -73,19 +73,21 @@
 
     </div>
 
+
     <script>
-        // Выбираем все кнопки
+        const telegramUsername = "arthurborsokov"; // твой Telegram username
+
         const buttons = document.querySelectorAll('.add-button');
 
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const itemId = btn.dataset.id; // получаем data-id
-                const botUrl = `https://t.me/arthur_stuff_bot?start=${itemId}`; // формируем ссылку
-                window.open(botUrl, '_blank'); // открываем в новой вкладке (Telegram app откроется)
+                const itemId = btn.dataset.id; // берём data-id кнопки
+                const text = encodeURIComponent(`Привет! Хочу купить статуэтку ${itemId}`);
+                const telegramUrl = `https://t.me/${telegramUsername}?text=${text}`;
+                window.open(telegramUrl, '_blank');
             });
         });
     </script>
-
 
 </body>
 
