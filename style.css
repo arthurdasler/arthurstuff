@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
+    background-color: rgb(255, 255, 255);
     font-family: 'Inter', sans-serif;
 }
 
@@ -138,11 +139,15 @@ body {
         padding-top: 5vw;
     }
 
+    .card {
+        gap: 3vw;
+    }
+
     .catalog {
         padding: 5vw 5vw;
         grid-template-columns: repeat(1, 1fr);
         font-size: 3vw;
-        gap: 5vw;
+        gap: 8vw;
     }
 
     .add-button {
