@@ -74,16 +74,20 @@
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script>
-  const tg = window.Telegram.WebApp;
+    <script>
+        const tg = window.Telegram.WebApp;
 
-  document.querySelectorAll('.add-button').forEach(div => {
-    div.addEventListener('click', () => {
-      const itemId = div.dataset.id;
-      tg.sendData(JSON.stringify({ action: 'buy', itemId }));
-    });
-  });
-</script>
+        // Инициализация WebApp
+        tg.expand();
+
+        document.querySelectorAll('.add-button').forEach(div => {
+            div.addEventListener('click', () => {
+                const itemId = div.dataset.id;
+                // Отправляем данные боту
+                tg.sendData(JSON.stringify({ action: 'buy', itemId }));
+            });
+        });
+    </script>
 
 </body>
 
