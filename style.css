@@ -29,7 +29,7 @@ body {
 /* Catalog */
 
 .catalog {
-    padding: 1vw;
+    padding: 2vw 1vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
@@ -58,15 +58,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: antiquewhite; */
-    border-radius: 2vw;
+    background-color: rgb(232, 232, 232);
+    border-radius: 1vw;
+    overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
     height: fit-content;
     aspect-ratio: 1/1;
-    border-radius: 1vw;
+
 }
 
 .card-description {
@@ -91,6 +92,18 @@ body {
     width: 50%;
 }
 
+.add-button-invis {
+    background-color: #ff682269;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vw;
+    box-sizing: border-box;
+    height: 100%; /* Устанавливаем высоту равной высоте родителя */
+    aspect-ratio: 1; /* Сохраняем квадратную форму */
+    opacity: 0;
+}
+
 .add-button:hover {
     cursor: pointer;
     background-color: #e65c1e;
@@ -103,7 +116,7 @@ body {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 0vw 10vw;
+    padding: 0vw 0.5vw;
 }
 
 /* Card */
@@ -121,12 +134,13 @@ body {
 @media (max-width: 768px) {
 
     .logotype img {
-        width: 15vw;
+        width: 20vw;
     }
 
     .catalog {
+        padding: 5vw 5vw;
         grid-template-columns: repeat(1, 1fr);
-        font-size: 2.2vw;
+        font-size: 3vw;
         gap: 5vw;
     }
 
@@ -140,7 +154,15 @@ body {
         width: 4vw;
     }
 
+    .card-image {
+        border-radius: 4vw;
+    }
     .card-down {
         padding: 0vw 20vw;
     }
+
+    .card-down {
+        padding: 0vw 0.5vw;
+    }
 }
+    
