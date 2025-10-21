@@ -1,213 +1,146 @@
 /* * {
-    border: 0.1px solid red;
+    border: 0.1px solid #000;
 } */
-
-:root {
-    --color1: rgba(127, 255, 212, 0);
-    --color2: rgba(255, 228, 196, 0);
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'ArthurstuffMono';
-  src: url('fonts/ArthurstuffMono.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-#page-content {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-
-html {
-  min-height: 100%;
-}
-
-
 body {
-    background: #d3e7eb;
-    background: linear-gradient(0deg, rgb(232, 251, 255) 0%, rgba(255, 255, 255, 1) 100%);
-    margin: 0;
-    min-height: 100%;
+    font-family: 'Inter', sans-serif;
 }
 
-.content {
-    flex: 1;
-    padding: 10px;
-
-}
-
-.allweb {
-    display: flex;
-    flex-direction: column;
-    min-height: 100svh;
-}
+/* Header */
 
 .logotype {
-    width: 150px;
-}
-
-.header {
     display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
-    width: 100%;
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.button {
-    font-family: 'ArthurstuffMono';
-    letter-spacing: -1px;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-
-    padding-bottom: 4px;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 8px;
-    white-space: nowrap;
-    height: fit-content;
+.logotype img {
+    width: 5vw;
+    height: auto;
 }
 
-
-.button:hover {
-    color: rgb(162, 162, 162);
-}
+/* Header */
 
 
-.header-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 500px;
-}
+/* Catalog */
 
 .catalog {
+    padding: 1vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px ;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
     justify-content: center;
-    align-items: start;
-    width: 100%;
-    padding-top: 30px;
-    background-color: var(--color2);
-    height: 100%;
+    font-size: 0.8vw;
 }
 
+/* Catalog */
 
 
-.footer {
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    text-align: end;
-    color: rgba(5, 5, 5, 0.402);
-    padding-top: 30px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-}
+
+/* Card */
 
 .card {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--color1);
-    gap: 8px;
+    gap: 1vw;
+
 }
 
-
-.card-img {
-    width: 100%;
-    height: 400px;
-}
-
-
-.card-img img {
-    display: block;
-    object-fit: contain;
+.card-image {
     width: 100%;
     height: 100%;
-}
-
-.card-info {
     display: flex;
-    flex-direction: column;
-    font-size: 14px;
-
-}
-
-.card-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: fit-content;
-    gap: 30px ;
-
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+    border-radius: 2vw;
+}
+
+.card-image img {
     width: 100%;
+    height: fit-content;
+    aspect-ratio: 1/1;
+    border-radius: 1vw;
 }
 
-.card-name {
-    font-family: 'ArthurstuffMono';
-    letter-spacing: -1px;
-    white-space: nowrap;
+.card-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
-.card-price {
-    font-family: 'ArthurstuffMono';
-    letter-spacing: -1px;
-    white-space: nowrap;
+.add-button {
+    background-color: #FF6822;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vw;
+    box-sizing: border-box;
+    height: 100%; /* Устанавливаем высоту равной высоте родителя */
+    aspect-ratio: 1; /* Сохраняем квадратную форму */
 }
+
+.add-button img {
+    width: 50%;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    background-color: #e65c1e;
+}
+
+.card-down {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0vw 10vw;
+}
+
+/* Card */
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {
 
-    .header {
-        display: block;
-    }
-
-    .header-buttons {
-        display: flex;
-        flex-direction: row;
-        width: fit-content;
-        justify-content: space-between;
-        width: 100%;
-        padding-top: 20px;
-        gap: 6px;
-    }
-
-    .card-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 10px ;
-        align-items: center;
-    }
-
-    .card-info {
-        align-items: center;
+    .logotype img {
+        width: 15vw;
     }
 
     .catalog {
-        grid-template-columns: repeat(2, 1fr);
-  }
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 2vw;
+        gap: 5vw;
+    }
 
-    
-    
-    .footer {
-        font-size: 10px;
+    .add-button {
+        height: 7vw;
+        width: 7vw;
+        border-radius: 7vw;
+    }
+
+    .add-button img {
+        width: 4vw;
+    }
+
+    .card-down {
+        padding: 0vw 20vw;
     }
 }
