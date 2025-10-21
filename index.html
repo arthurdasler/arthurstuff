@@ -82,7 +82,7 @@
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const itemId = btn.dataset.id; // берём data-id кнопки
-                const text = encodeURIComponent(`Привет! Хочу купить статуэтку ${itemId}`);
+                const text = encodeURIComponent(`Привет! Хочу купить объект из серии «${itemId}»`);
                 const telegramUrl = `https://t.me/${telegramUsername}?text=${text}`;
                 window.open(telegramUrl, '_blank');
             });
