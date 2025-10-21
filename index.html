@@ -74,28 +74,24 @@
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tg = window.Telegram.WebApp;
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tg = window.Telegram.WebApp;
 
-            // Проверяем, что mini app реально открыт через Telegram
-            if (!tg.initData) {
-                console.warn("Это не mini app Telegram, tg.sendData не сработает");
-                return;
-            }
+    if (!tg.initData) {
+        console.warn("Это не mini app Telegram, tg.sendData не сработает");
+        return;
+    }
 
-            document.querySelectorAll('.add-button').forEach(div => {
-                div.addEventListener('click', () => {
-                    const itemId = div.dataset.id;
-                    tg.sendData(JSON.stringify({ action: 'buy', itemId }));
-                });
-            });
+    document.querySelectorAll('.add-button').forEach(div => {
+        div.addEventListener('click', () => {
+            const itemId = div.dataset.id;
+            tg.sendData(JSON.stringify({ action: 'buy', itemId }));
+            tg.showAlert(`Вы выбрали: ${itemId}`);
         });
-    </script>
-
-    <script>
-        const tg = window.Telegram.WebApp;
-    </script>
+    });
+});
+</script>
 
 </body>
 
