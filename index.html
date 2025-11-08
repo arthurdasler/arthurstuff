@@ -11,7 +11,7 @@
 
 </head>
 
-<body style="margin: 0;">
+<body>
 
     <div class="logotype">
         <img src="img/logotype.svg" alt="Arthur Logotype">
@@ -34,6 +34,8 @@
             </div>
         </div>
 
+        
+
         <div class="card">
             <div class="card-image">
                 <img src="img/untitled-4.webp" alt="Test Image">
@@ -49,6 +51,7 @@
             </div>
         </div>
 
+    
 
         <div class="card">
             <div class="card-image">
@@ -59,7 +62,7 @@
                     <div class="card-title"> BLACK EDITION</div>
                     <div class="card-price"> 11 900 ₽ </div>
                 </div>
-                <div class="add-button" data-id="Это все цветочки" >
+                <div class="add-button">
                     <img src="img/add-icon.svg" alt="add-button">
                 </div>
             </div>
@@ -74,20 +77,6 @@
     </div>
 
 
-    <script>
-        const telegramUsername = "arthurborsokov"; // твой Telegram username
-
-        const buttons = document.querySelectorAll('.add-button');
-
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const itemId = btn.dataset.id; // берём data-id кнопки
-                const text = encodeURIComponent(`Привет! Хочу купить «${itemId}»`);
-                const telegramUrl = `https://t.me/${telegramUsername}?text=${text}`;
-                window.open(telegramUrl, '_blank');
-            });
-        });
-    </script>
 
 </body>
 
